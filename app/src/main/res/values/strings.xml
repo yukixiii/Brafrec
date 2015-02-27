@@ -7,4 +7,5 @@
     <string name="twitter_callback_url">brafrec://oauth</string>
     <string name="twitter_consumer_key">WO9whTnQY2arJAS96K0MPSOiU</string>
     <string name="twitter_consumer_secret">IzHTc7aYdGHh23oCbUoySrUYW3UUo5pGbYqPp5s0W9UoaWtG7K</string>
+    <string name="title_activity_home_timeline">HomeTimelineActivity</string>
 </resources>

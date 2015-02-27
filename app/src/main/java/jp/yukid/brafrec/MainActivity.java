@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -44,6 +45,21 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 // OAuth認可を開始する
                 startOAuth();
+            }
+        });
+
+        accountList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // クリックしたアカウントのTwitterインスタンスを取得して、次のアクティビティに移動する
+                Twitter selectedAccount;
+                Intent intent;
+
+                selectedAccount = TwitterAccounts.accounts.get(position);
+                intent = new Intent(MainActivity.this, HomeTimelineActivity.class);
+
+                intent.putExtra("twitter", selectedAccount);
+                MainActivity.this.startActivity(intent);
             }
         });
     }
