@@ -18,16 +18,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/header" />
+            android:id="@+id/header"
+            android:textSize="9sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/text" />
+            android:id="@+id/text"
+            android:textColor="#ff000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/footer" />
+            android:id="@+id/footer"
+            android:textSize="9sp" />
     </LinearLayout>
 </LinearLayout>
